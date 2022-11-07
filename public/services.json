@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "01",
+        "service_id": "01",
+        "title": "Wedding Photography",
+        "img": "https://i.ibb.co/sFhLqtg/wedding.jpg",
+        "price": "375.00",
+        "details": "A wedding is one of the greatest events that every couple looks into. Most couples desire to make it more meaningful and unforgettable as it happens once in a lifetime. Finding the venue, shopping for the wedding dress, preparing invitations, and booking a photographer and videographer should be a top priority. But obviously, photography and videography are among the most suitable and effective ways to capture those precious moments. A photograph is a powerful object to remind a couple of the events and enkindles of flashing the event to memory; thus, photography has become a demand for every wedding. Hence, numerous individuals pursue a career in photography to practice their technical expertise, creativity, and passion for producing and preserving images. Concerning marketing the proficiency of every photographer, an extraordinary portfolio is an effective way to advance career opportunities."
+    },
+    {
+        "_id": "02",
+        "service_id": "02",
+        "title": "Birthday Photography",
+        "img": "https://i.ibb.co/cQNS4tR/biethday.jpg",
+        "price": "275.00",
+        "details": "Congratulations! Your baby is turning one! What are you gonna do to remember this special first birthday? You can make an amazing party, or you can remember this special day with a photoshoot. What about doing your baby’s first birthday photoshoot in Leiden? There are many themes of the first birthday photoshoot I have done over the years. The “Baby Baker” was the theme of this first birthday photoshoot. I am a baby photographer with a home photostudio in Leiderdorp, Leiden. Every baby is unique and deserves unique photos of his or her first birthday. You can book an amazing cake smash photoshoot smashing and splash around or we can make a beautiful first birthday photoshoot for your child without cake. I have many beautiful backgrounds that only my photo studio offers. You can check some of them"
+    },
+    {
+        "_id": "03",
+        "service_id": "03",
+        "title": "Couple Photography",
+        "img": "https://i.ibb.co/4Szs3j5/couple.jpg",
+        "price": "315.00",
+        "details": "Last month I took a trip to Brookings, Oregon where I got to take photos for this cute local couple! Brookings is a small town on the southern Oregon coast and it is absolutely BEAUTIFUL. The whole coastline is just stunning and so fun to explore. This beach was one of my favorites - I mean look at all those huge rocks on the beach! We did our shoot on one of those rare sunny days and I just looove the golden hour sunset behind them. It was actually pretty cold and windy but you’d never guess in the photos! This beach is actually right off the highway but there wasn’t a single other person there! When I drove by it coming into town a few years ago I thought I HAD to do a shoot there one day, so i was stoked to do R & M’s photos here! If you and your partner are in or planning a trip to Oregon and want a fun, romantic couples shoot to document your trip, fill out my contact form HERE and let’s start planning! I travel to Oregon often and have lots of suggestions on different beaches on the southern and northern Oregon coast! "
+    },
+    {
+        "_id": "04",
+        "service_id": "04",
+        "title": "Model Photoshoot",
+        "img": "https://i.ibb.co/jvHH70C/model.jpg",
+        "price": "215.00",
+        "details": "Posing as a model in front of a camera is an art unto itself. The objective may seem simple, but in reality, it's more complicated than you may realize. In model photography, you must translate a three-dimensional object, your body, into the two-dimensional space of a flat image. This translation is where many portraits may, well, fall flat. For most people, models included, posing for the camera does not come naturally. Photography poses has to be learned, something that gets better with practice and study. Studying involves doing your research. Use Pinterest and Google to find model poses for photo shoots that you'd like to emulate. Put together an inspiration board with tearsheets of the best model poses that you love. You can also practice in the mirror. The day of the shoot is your moment to shine. Get to know the photographer with a little small talk."
+    },
+    {
+        "_id": "05",
+        "service_id": "05",
+        "title": "Event Photography",
+        "img": "https://i.ibb.co/ZfsS6mq/event.jpg",
+        "price": "475.00",
+        "details": "Corporate headshots can be a tricky beast. Aside from securing an experienced and professional photographer, it can be difficult to negotiate time in your busy company schedule. They can be time consuming, potentially disruptive and can sometimes result in a temporary loss of productivity if not done efficiently. A difficult pill to swallow when this is a service you’re engaging to improve your business. Event Photos Australia believe in doing things right and doing them well. It’s all about timing in both photography and in business. The decision to combine event photography with corporate headshots seemed like common sense. You have all of your staff gathered in one place and they are well-presented. We are there with the highest quality of equipment and a range of backdrops."
+    },
+    {
+        "_id": "06",
+        "service_id": "06",
+        "title": "Advertising Photography",
+        "img": "https://i.ibb.co/JHrvJP3/add.jpg",
+        "price": "415.00",
+        "details": "Photography Blog is much more than just a blog. Since its launch in 2003 it has evolved into a fully-fledged photography website, featuring expert camera, lens and accessory reviews, original news from around the world and in-depth techniques articles. Photography competitions with sponsored prizes and a weekly newsletter delivered to more than 10,000 subscribers further enhance user loyalty. Photography Blog provides a tremendous opportunity to advertisers who want to want to capture this audience at the source - the actual meeting place of thousands of photographers across all ability levels. True passion for photography drives these users - and these users are inspired and guided by what they see on Photography Blog. There is no better way to make your brand a hot topic for this highly concentrated audience than by joining the community and advertising on Photography Blog"
+    }
+]
