@@ -1,0 +1,16 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    background-color: khaki;
+}
+
+.my-name {
+    margin-bottom: 10px;
+}
+
+.my-solo {
+    margin-top: 10px;
+}
