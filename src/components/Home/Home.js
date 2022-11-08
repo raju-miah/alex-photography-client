@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ExtraSectionOne from '../HomeExtraSection/ExtraSectionOne/ExtraSectionOne';
+import ExtraSectionTwo from '../HomeExtraSection/ExtraSectionTwo/ExtraSectionTwo';
 import './Home.css';
 
 const Home = () => {
@@ -61,6 +63,9 @@ const Home = () => {
                     <button className='home-see-all-btn'>See All</button>
                 </Link>
             </div>
+
+            <ExtraSectionOne></ExtraSectionOne>
+            <ExtraSectionTwo></ExtraSectionTwo>
         </>
     );
 };

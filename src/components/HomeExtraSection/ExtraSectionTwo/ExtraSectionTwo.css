@@ -1,0 +1,48 @@
+.extra-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: turquoise;
+    padding: 100px;
+    margin: 50px;
+}
+
+.extra-two-left {
+    text-align: left;
+}
+
+.extra-two-left h2 {
+    font-size: 55px;
+}
+
+.extra-two-right {
+    text-align: center;
+}
+
+.extra-two-right h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.fb {
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.insta {
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.pin {
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tw {
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
