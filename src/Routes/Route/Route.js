@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login";
 import Services from "../../components/Services/Services";
+import ServicesDetails from "../../components/ServicesDetails/ServicesDetails";
 import SignUp from "../../components/SignUp/SignUp";
 import Main from "../../Layout/Main";
 
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/services/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                element: <ServicesDetails></ServicesDetails>
             },
             {
                 path: '/login',

@@ -14,15 +14,17 @@ const ServicesCard = ({ service }) => {
                     <>
                         {
                             details.length > 100 ?
-                                <p>{details.slice(0, 100) + '... Read More'}</p>
+                                <p>{details.slice(0, 100) + '...Read More'}</p>
                                 :
                                 <p>{details}</p>
                         }
                     </>
                 </div>
-                <button className='service-card-btn'>
-                    <Link to={`/services/${_id}`}>Details</Link>
-                </button>
+                <Link to={`/services/${_id}`}>
+
+                    <button className='service-card-btn'>Details</button>
+                </Link>
+
             </div>
         </div>
     );

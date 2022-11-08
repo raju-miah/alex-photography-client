@@ -1,0 +1,11 @@
+.servicesDetails {
+    border: 2px solid tomato;
+    border-radius: 20px;
+    width: 685px;
+    padding: 25px;
+    margin: 30px auto;
+}
+
+.servicesDetails img {
+    border-radius: 20px;
+}
