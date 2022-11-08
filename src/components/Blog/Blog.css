@@ -1,0 +1,22 @@
+.blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.blog-que {
+    margin: 20px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.blog-title {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.question {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
