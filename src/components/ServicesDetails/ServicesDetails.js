@@ -3,10 +3,13 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './ServicesDetails.css';
 import toast, { Toaster } from 'react-hot-toast';
+import useTitle from '../../hooks/useTitle';
 
 const ServicesDetails = () => {
     const { _id, img, title, price, details } = useLoaderData();
     const { user } = useContext(AuthContext);
+
+    useTitle('ServicesDetails');
 
     const handelReview = event => {
         event.preventDefault();

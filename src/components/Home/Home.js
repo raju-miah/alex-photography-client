@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import ExtraSectionOne from '../HomeExtraSection/ExtraSectionOne/ExtraSectionOne';
 import ExtraSectionTwo from '../HomeExtraSection/ExtraSectionTwo/ExtraSectionTwo';
 import './Home.css';
 
 const Home = () => {
     const [servicesHome, setServicesHome] = useState([]);
+
+    useTitle('Home');
 
     useEffect(() => {
         fetch('http://localhost:5000/serviceshome')
