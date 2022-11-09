@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import MyReviewsCard from '../MyReviewsCard/MyReviewsCard';
 import './MyReviews.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
@@ -16,6 +17,24 @@ const MyReviews = () => {
     }, [user?.email])
 
 
+    const handelDeleteReview = id => {
+
+        fetch(`http://localhost:5000/reviews/${id}`, {
+            method: 'DELETE',
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.deletedCount > 0) {
+                    toast.success('Deleted Successfully');
+                    const remaining = myreviews.filter(review => review._id !== id);
+                    setMyreviews(remaining);
+                }
+            })
+
+    }
+
 
     return (
         <div>
@@ -25,9 +44,12 @@ const MyReviews = () => {
                     myreviews.map(myreview => <MyReviewsCard
                         key={myreview._id}
                         myreview={myreview}
+                        handelDeleteReview={handelDeleteReview}
                     ></MyReviewsCard>)
                 }
             </div>
+
+            <Toaster />
         </div>
     );
 };
