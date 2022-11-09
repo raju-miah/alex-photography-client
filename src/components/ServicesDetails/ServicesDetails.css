@@ -9,3 +9,43 @@
 .servicesDetails img {
     border-radius: 20px;
 }
+
+.review-sec {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.review-sec input {
+    width: 500px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.review-sec label {
+    display: inline-block;
+}
+
+.review-sec textarea {
+    width: 500px;
+    padding: 10px;
+}
+
+.review-controlar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-review-btn {
+    padding: 15px 80px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    background: orange;
+    border: none;
+    border-radius: 10px;
+}
