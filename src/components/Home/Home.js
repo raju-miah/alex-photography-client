@@ -24,8 +24,8 @@ const Home = () => {
                         very dedicated to my work</p>
                     <p className='my-solo'>"Photography in not to create a moment, <br />Photography is capture the moment"</p>
                 </div>
-                <div className='home-img'>
-                    <img src="https://i.ibb.co/LPcFzX8/home-img.png" alt="" />
+                <div>
+                    <img className='home-img' src="https://i.ibb.co/LPcFzX8/home-img.png" alt="" />
                 </div>
             </div>
             <div>

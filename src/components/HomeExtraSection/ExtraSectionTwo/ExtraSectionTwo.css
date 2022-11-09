@@ -46,3 +46,17 @@
     margin: 10px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .extra-two {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: turquoise;
+        padding: 25px;
+        margin: 50px;
+    }
+
+    .extra-two-left h2 {
+        font-size: 35px;
+    }
+}

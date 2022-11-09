@@ -51,3 +51,31 @@ li {
     cursor: pointer;
     margin-right: 10px;
 }
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        display: block;
+        position: absolute;
+        list-style: none;
+        left: 0;
+        top: 10%;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        background-color: white;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        display: block;
+        right: 20px;
+        font-size: 18px;
+    }
+}

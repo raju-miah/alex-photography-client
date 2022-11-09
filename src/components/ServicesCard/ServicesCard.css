@@ -28,3 +28,18 @@
 .service-card-btn:hover {
     background-color: aquamarine;
 }
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        border: 2px solid tomato;
+        border-radius: 10px;
+        width: 410px;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .service-card img {
+        width: 365px;
+        border-radius: 10px;
+    }
+}

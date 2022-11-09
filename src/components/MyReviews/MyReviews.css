@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+@media screen and (max-width: 768px) {
+    .my-reviews {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
