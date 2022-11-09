@@ -38,16 +38,25 @@ const MyReviews = () => {
 
     return (
         <div>
-            <h2>You have review: {myreviews.length}</h2>
-            <div className='my-reviews'>
-                {
-                    myreviews.map(myreview => <MyReviewsCard
-                        key={myreview._id}
-                        myreview={myreview}
-                        handelDeleteReview={handelDeleteReview}
-                    ></MyReviewsCard>)
-                }
-            </div>
+            {
+                myreviews.length === 0 ?
+                    <>
+                        <h2>No reviews were added</h2>
+                    </>
+                    :
+                    <>
+                        <h2>You have added review total: {myreviews.length}</h2>
+                        <div className='my-reviews'>
+                            {
+                                myreviews.map(myreview => <MyReviewsCard
+                                    key={myreview._id}
+                                    myreview={myreview}
+                                    handelDeleteReview={handelDeleteReview}
+                                ></MyReviewsCard>)
+                            }
+                        </div>
+                    </>
+            }
 
             <Toaster />
         </div>

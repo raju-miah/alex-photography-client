@@ -1,0 +1,20 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+}
+
+.spinner::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 10px solid #dddddd;
+    border-top-color: #009579;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(1turn);
+    }
+}

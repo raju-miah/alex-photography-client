@@ -4,9 +4,13 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Header.css';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logoutUser } = useContext(AuthContext);
 
-
+    const handelLogOut = () => {
+        logoutUser()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
 
 
     return (
@@ -22,11 +26,12 @@ const Header = () => {
                         <>
                             <Link to='/myreviews'><li>My Reviews</li></Link>
                             <Link to='/addservice'><li>Add Service</li></Link>
+                            <button onClick={handelLogOut} className="nav-btn">Logout</button>
                         </>
                         :
                         <>
-                            <Link to='/login'><li>Login</li></Link>
-                            <Link to='/signup'><li>SignUp</li></Link>
+                            <Link to='/login'><button className='nav-btn'>Login</button></Link>
+                            <Link to='/signup'><button className='nav-btn'>Sign Up</button></Link>
                         </>
                 }
 

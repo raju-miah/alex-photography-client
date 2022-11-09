@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './ServicesDetails.css';
 import toast, { Toaster } from 'react-hot-toast';
@@ -63,29 +63,38 @@ const ServicesDetails = () => {
             <div>
                 <h2>Add Your Review</h2>
 
-                <form onSubmit={handelReview}>
-                    <h4>Review My Service</h4>
-                    <h2>{title}</h2>
-                    <div className='review-sec'>
-                        <div className='review-controlar'>
-                            <label htmlFor="name">Your Name</label>
-                            <input type="text" name='name' />
-                        </div>
-                        <div className='review-controlar'>
-                            <label htmlFor="email">Your Email</label>
-                            <input type="text" name='email' defaultValue={user?.email} readOnly />
-                        </div>
-                        <div className='review-controlar'>
-                            <label htmlFor="photo">Your PhotoURL</label>
-                            <input type="text" name='photo' />
-                        </div>
-                        <div className='review-controlar'>
-                            <label htmlFor="message">Write details</label>
-                            <textarea name="message" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
-                    <input className='add-review-btn' type="submit" value="Add Your Review" />
-                </form>
+                {
+                    user?.uid ?
+                        <form onSubmit={handelReview}>
+                            <h4>Review My Service</h4>
+                            <h2>{title}</h2>
+                            <div className='review-sec'>
+                                <div className='review-controlar'>
+                                    <label htmlFor="name">Your Name</label>
+                                    <input type="text" name='name' required />
+                                </div>
+                                <div className='review-controlar'>
+                                    <label htmlFor="email">Your Email</label>
+                                    <input type="text" name='email' defaultValue={user?.email} readOnly />
+                                </div>
+                                <div className='review-controlar'>
+                                    <label htmlFor="photo">Your PhotoURL</label>
+                                    <input type="text" name='photo' required />
+                                </div>
+                                <div className='review-controlar'>
+                                    <label htmlFor="message">Write details</label>
+                                    <textarea name="message" required id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <input className='add-review-btn' type="submit" value="Add Your Review" />
+                        </form>
+                        :
+                        <>
+                            <div>
+                                <h2>If you wanna add your review then <Link to="/login">Please Login</Link></h2>
+                            </div>
+                        </>
+                }
                 <Toaster />
             </div>
 

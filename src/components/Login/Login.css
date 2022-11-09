@@ -43,3 +43,13 @@
     font-size: 18px;
     cursor: pointer;
 }
+
+.btn-google {
+    padding: 15px 90px;
+    background: rgb(148, 235, 18);
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0px;
+    font-size: 18px;
+    cursor: pointer;
+}

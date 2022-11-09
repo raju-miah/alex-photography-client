@@ -70,7 +70,7 @@ const UpdateReview = () => {
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="message">Write details</label>
-                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            <textarea name="message" required id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <input className='add-review-btn' type="submit" value="Update Your Review" />

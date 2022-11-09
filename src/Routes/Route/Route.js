@@ -10,6 +10,7 @@ import ServicesDetails from "../../components/ServicesDetails/ServicesDetails";
 import SignUp from "../../components/SignUp/SignUp";
 import UpdateReview from "../../components/UpdateReview/UpdateReview";
 import Main from "../../Layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addservice',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/services/:id',
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/myreviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: '/reviews/:id',
