@@ -4,6 +4,8 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './ServicesDetails.css';
 import toast, { Toaster } from 'react-hot-toast';
 import useTitle from '../../hooks/useTitle';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesDetails = () => {
     const { _id, img, title, price, details } = useLoaderData();
@@ -54,7 +56,13 @@ const ServicesDetails = () => {
             <div>
                 <h2>This is services details</h2>
                 <div className='servicesDetails'>
-                    <img src={img} alt="" />
+                    {/* react photo viewer */}
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} alt="" />
+                        </PhotoView>
+                    </PhotoProvider>
+
                     <div>
                         <h2>{title}</h2>
                         <p>Price: ${price}</p>

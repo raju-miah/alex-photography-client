@@ -4,6 +4,8 @@ import useTitle from '../../hooks/useTitle';
 import ExtraSectionOne from '../HomeExtraSection/ExtraSectionOne/ExtraSectionOne';
 import ExtraSectionTwo from '../HomeExtraSection/ExtraSectionTwo/ExtraSectionTwo';
 import './Home.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Home = () => {
     const [servicesHome, setServicesHome] = useState([]);
@@ -40,7 +42,14 @@ const Home = () => {
 
                         >
                             <div className='services-home-card'>
-                                <img src={servicehome.img} alt="" />
+
+                                {/* react photo viewer */}
+                                <PhotoProvider>
+                                    <PhotoView src={servicehome.img}>
+                                        <img src={servicehome.img} alt="" />
+                                    </PhotoView>
+                                </PhotoProvider>
+
                                 <div>
                                     <h2>{servicehome.title}</h2>
                                     <p>Price: ${servicehome.price}</p>
