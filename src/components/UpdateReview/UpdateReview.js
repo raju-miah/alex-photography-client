@@ -58,7 +58,7 @@ const UpdateReview = () => {
                     <div className='review-sec'>
                         <div className='review-controlar'>
                             <label htmlFor="name">Your Name</label>
-                            <input type="text" name='name' />
+                            <input type="text" name='name' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="email">Your Email</label>
@@ -66,7 +66,7 @@ const UpdateReview = () => {
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="photo">Your PhotoURL</label>
-                            <input type="text" name='photo' />
+                            <input type="text" name='photo' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="message">Write details</label>

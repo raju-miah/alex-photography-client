@@ -21,7 +21,8 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: aquamarine;
+    background-color: rgb(3, 2, 27);
+    color: white;
 }
 
 .nav-logo {
@@ -40,6 +41,7 @@ li {
     padding: 0 10px;
     margin: 0 10px;
     cursor: pointer;
+    color: white;
 }
 
 .nav-btn {
@@ -47,7 +49,7 @@ li {
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    background: orange;
+    background: rgb(30, 255, 0);
     cursor: pointer;
     margin-right: 10px;
 }

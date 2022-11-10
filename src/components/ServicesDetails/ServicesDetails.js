@@ -13,15 +13,25 @@ const ServicesDetails = () => {
 
     useTitle('ServicesDetails');
 
-    const [allReview, setAllReview] = useState([]);
+    const [allreview, setAllReview] = useState([]);
 
-    console.log(allReview)
+    console.log(allreview)
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch(`http://localhost:5000/reviewspecifq/${_id}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
-            .then(data => setAllReview(data))
-    }, [])
+            .then(data => {
+                if (data.status >= 400) {
+                    return
+                }
+                setAllReview(data)
+            })
+            .catch(err => console.log(err))
+    }, [_id])
 
     const handelReview = event => {
         event.preventDefault();
@@ -85,7 +95,7 @@ const ServicesDetails = () => {
                 <h1>All Review</h1>
                 <div className='my-reviews'>
                     {
-                        allReview.map(allRev => <div
+                        allreview.map(allRev => <div
                             key={allRev._id}
                         >
                             <div className='my-review-card'>
@@ -101,11 +111,15 @@ const ServicesDetails = () => {
             </div>
 
             <div>
-                <h2>Add Your Review</h2>
+                <h2 className='add-re-text'>Add Your Review</h2>
+
+
+                {/* Here is add review section */}
+
 
                 {
                     user?.uid ?
-                        <form onSubmit={handelReview}>
+                        <form onSubmit={handelReview} className="review-post-form">
                             <h4>Review My Service</h4>
                             <h2>{title}</h2>
                             <div className='review-sec'>

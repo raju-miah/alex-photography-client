@@ -48,29 +48,29 @@ const AddService = () => {
 
     return (
         <div>
-            <h2>Add Your Service</h2>
+            <h1>Add Your Service</h1>
             <div>
-                <form onSubmit={handelAddService}>
+                <form onSubmit={handelAddService} className="review-post-form">
                     <div className='review-sec'>
                         <div className='review-controlar'>
                             <label htmlFor="serviceId">Service Id</label>
-                            <input type="text" name='serviceId' />
+                            <input type="text" name='serviceId' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="serviceName">Service Name</label>
-                            <input type="text" name='serviceName' />
+                            <input type="text" name='serviceName' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="photo">Service PhotoURL</label>
-                            <input type="text" name='photo' />
+                            <input type="text" name='photo' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="price">Service Price</label>
-                            <input type="text" name='price' />
+                            <input type="text" name='price' required />
                         </div>
                         <div className='review-controlar'>
                             <label htmlFor="details">Write About Service details</label>
-                            <textarea name="details" id="" cols="30" rows="10"></textarea>
+                            <textarea name="details" required id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <input className='add-review-btn' type="submit" value="Add Your Service" />

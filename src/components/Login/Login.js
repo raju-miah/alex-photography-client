@@ -24,8 +24,32 @@ const Login = () => {
         loginUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
-                navigate(from, { replace: true });
+                // console.log(user)
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                console.log(currentUser);
+
+                // jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        // set token in local storage
+                        localStorage.setItem('token', data.token);
+                        navigate(from, { replace: true });
+                    })
+
+
+
             })
             .catch(error => {
                 console.error(error)
@@ -43,7 +67,7 @@ const Login = () => {
 
     return (
         <div className='from-container'>
-            <h2 className='login-text'>Login</h2>
+            <h2 className='login-text'>User Login</h2>
             <form onSubmit={handelLogin} className='form'>
                 <div className="form-control">
                     <label htmlFor="email">Email</label>

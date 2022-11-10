@@ -4,7 +4,8 @@
     align-items: center;
     /* width: 80%; */
     margin: 50px auto;
-    background-color: khaki;
+    background-color: rgb(15, 15, 51);
+    color: white;
 }
 
 .my-name {
@@ -36,13 +37,14 @@
     font-size: 18px;
     cursor: pointer;
     margin-top: 15px;
-    background: orange;
+    background: #24A056;
     border: none;
+    color: white;
     border-radius: 10px;
 }
 
 .service-card-home-btn:hover {
-    background-color: aquamarine;
+    background-color: rgb(14, 14, 37);
 }
 
 .home-see-all-btn {
@@ -50,7 +52,8 @@
     font-size: 18px;
     border: none;
     border-radius: 10px;
-    background: lightgreen;
+    background-color: rgb(14, 14, 37);
+    color: white;
     cursor: pointer;
 }
 
@@ -61,7 +64,8 @@
         justify-content: center;
         align-items: center;
         margin: 50px auto;
-        background-color: khaki;
+        background-color: rgb(15, 15, 51);
+        color: white;
     }
 
     .services-home {
@@ -80,7 +84,7 @@
         font-size: 18px;
         border: none;
         border-radius: 10px;
-        background: lightgreen;
+        background: #24A056;
         cursor: pointer;
     }
 }

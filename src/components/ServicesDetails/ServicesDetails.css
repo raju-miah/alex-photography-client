@@ -12,9 +12,10 @@
 }
 
 .review-sec {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
 }
 
@@ -39,6 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .add-review-btn {
@@ -49,6 +51,20 @@
     background: orange;
     border: none;
     border-radius: 10px;
+}
+
+.review-post-form {
+    border: 2px solid tomato;
+    padding: 30px;
+    margin: 10px 328px;
+    border-radius: 10px;
+}
+
+.add-re-text {
+
+    font-size: 45px;
+    margin-top: 25px;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -74,5 +90,12 @@
     .review-sec textarea {
         width: 350px;
         padding: 10px;
+    }
+
+    .review-post-form {
+        border: 2px solid tomato;
+        padding: 30px;
+        margin: 10px 25px;
+        border-radius: 10px;
     }
 }

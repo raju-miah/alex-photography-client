@@ -16,8 +16,9 @@
     font-size: 18px;
     cursor: pointer;
     margin-top: 15px;
-    background: orange;
+    background: #24A056;
     border: none;
+    color: white;
     border-radius: 10px;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .service-card-btn:hover {
-    background-color: aquamarine;
+    background-color: rgb(14, 14, 37);
 }
 
 @media screen and (max-width: 768px) {
