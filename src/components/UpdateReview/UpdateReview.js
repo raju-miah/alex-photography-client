@@ -29,7 +29,7 @@ const UpdateReview = () => {
 
         console.log(update)
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://alex-photography-server.vercel.app/reviews/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -52,7 +52,7 @@ const UpdateReview = () => {
         <div>
             <h2>Up date your review</h2>
             <div>
-                <form onSubmit={handelReviewUpdate}>
+                <form onSubmit={handelReviewUpdate} className="review-post-form">
                     <h4>Update Your Review on My Service</h4>
                     <h2>{serviceName}</h2>
                     <div className='review-sec'>

@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://alex-photography-server.vercel.app/services/${params.id}`),
                 element: <ServicesDetails></ServicesDetails>
             },
             {
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
             {
                 path: '/reviews/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://alex-photography-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/blog',

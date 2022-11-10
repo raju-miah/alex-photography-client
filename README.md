@@ -1,6 +1,6 @@
 # Project Name: Alex Photography (a individual service provider)
 
-# Live-Site Link: 
+# Live-Site Link: https://alex-photography-5dc21.web.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

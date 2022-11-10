@@ -18,7 +18,7 @@ const ServicesDetails = () => {
     console.log(allreview)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviewspecifq/${_id}`, {
+        fetch(`https://alex-photography-server.vercel.app/reviewspecifq/${_id}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -52,7 +52,7 @@ const ServicesDetails = () => {
             message
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://alex-photography-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
