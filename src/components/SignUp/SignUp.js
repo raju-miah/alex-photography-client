@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import './SignUp.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignUp = () => {
     const { signupUser } = useContext(AuthContext);
@@ -21,6 +22,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                form.reset();
+                toast.success('SignUp Success');
             })
             .catch(error => {
                 console.error(error)
@@ -48,6 +51,7 @@ const SignUp = () => {
                 <input className='btn-login' type="submit" value="Sign Up" />
             </form>
             <p className='new-u'>Already Have an account? <Link to="/login">Please Login</Link></p>
+            <Toaster />
         </div>
     );
 };
