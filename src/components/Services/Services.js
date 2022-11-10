@@ -17,13 +17,22 @@ const Services = () => {
 
     return (
         <div>
-            <h2>This is services</h2>
+            <h1>My All Services</h1>
             <div className='services-card-P'>
                 {
-                    services.map(service => <ServicesCard
-                        key={service._id}
-                        service={service}
-                    ></ServicesCard>)
+                    services.length === 0 ?
+                        <>
+                            <div className='spinner'></div>
+                        </>
+                        :
+                        <>
+                            {
+                                services.map(service => <ServicesCard
+                                    key={service._id}
+                                    service={service}
+                                ></ServicesCard>)
+                            }
+                        </>
                 }
             </div>
         </div>

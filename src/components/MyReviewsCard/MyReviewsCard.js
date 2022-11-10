@@ -11,7 +11,7 @@ const MyReviewsCard = ({ myreview, handelDeleteReview }) => {
                 <p>{message}</p>
                 <img className='my-review-card-img' src={photo} alt="" />
                 <h3>{client}</h3>
-                <p>{serviceName}</p>
+                <p>Service Name: {serviceName}</p>
                 <div>
                     <button onClick={() => handelDeleteReview(_id)} className='delete-btn'>Delete</button>
                     <Link to={`/reviews/${_id}`}><button className='update-btn'>Update</button></Link>

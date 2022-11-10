@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './ServicesDetails.css';
@@ -12,6 +12,16 @@ const ServicesDetails = () => {
     const { user } = useContext(AuthContext);
 
     useTitle('ServicesDetails');
+
+    const [allReview, setAllReview] = useState([]);
+
+    console.log(allReview)
+
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+            .then(res => res.json())
+            .then(data => setAllReview(data))
+    }, [])
 
     const handelReview = event => {
         event.preventDefault();
@@ -54,7 +64,7 @@ const ServicesDetails = () => {
     return (
         <>
             <div>
-                <h2>This is services details</h2>
+                <h1>Services details</h1>
                 <div className='servicesDetails'>
                     {/* react photo viewer */}
                     <PhotoProvider>
@@ -68,6 +78,25 @@ const ServicesDetails = () => {
                         <p>Price: ${price}</p>
                         <p><strong>Details:</strong> {details}</p>
                     </div>
+                </div>
+            </div>
+
+            <div>
+                <h1>All Review</h1>
+                <div className='my-reviews'>
+                    {
+                        allReview.map(allRev => <div
+                            key={allRev._id}
+                        >
+                            <div className='my-review-card'>
+                                <p>{allRev.message}</p>
+                                <img className='my-review-card-img' src={allRev.photo} alt="" />
+                                <h3>{allRev.client}</h3>
+                                <p>Service Name: {allRev.serviceName}</p>
+                            </div>
+
+                        </div>)
+                    }
                 </div>
             </div>
 
